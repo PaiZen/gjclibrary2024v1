@@ -1,3 +1,4 @@
+<?php require("validate.php") ?>
 <!DOCTYPE html>
 <html lang="en" class="hydrated">
 
@@ -7,28 +8,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login & Registration</title>
     <link rel="stylesheet" href="styles.css">
+    <?php
+        if($username_error != null){
+            ?> <style>.username-error{display:block}</style> <?php
+        }
+        if($password_error != null){
+            ?> <style>.password-error{display:block}</style> <?php
+        }
+        if($success != null){
+            ?> <style>.success{display:block}</style> <?php
+        }
+    ?>
 </head>
 
 <body>
     <div class="wrapper">
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="#">
+            <form action="#" method="post">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
+                    <input type="text" name="username" value="<?php echo $username; ?>" required>
+                    <p class="error username-error">
+                        <?php echo $username_error; ?>
+                    </p>
                     <label>Username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" name="password" value="<?php echo $password; ?>" required>
+                    <p class="error password-error">
+                        <?php echo $password_error; ?>
+                    </p>
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">Remember me</label>
                     <a href="#">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" name="login" class="btn">Login</button>
+                <p class="success">
+                    <?php echo $success; ?>
+                </p>
                 <div class="login-register">
                     <p>Don't have an account? <a href="#" class="register-link">Register here</a> </p>
                 </div>
@@ -37,7 +58,7 @@
 
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="#">
+            <form action="#" method="post">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" required>
