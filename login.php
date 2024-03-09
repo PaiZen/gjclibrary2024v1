@@ -1,4 +1,4 @@
-<?php require("validate.php") ?>
+<?php require ("validate.php") ?>
 <!DOCTYPE html>
 <html lang="en" class="hydrated">
 
@@ -28,7 +28,7 @@
             <form action="#" method="post">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" name="username" value="<?php echo $username; ?>" required>
+                    <input type="text" name="username" value="<?php echo $username; ?>">
                     <p class="error username-error">
                         <?php echo $username_error; ?>
                     </p>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" name="password" value="<?php echo $password; ?>" required>
+                    <input type="password" name="password" value="<?php echo $password; ?>">
                     <p class="error password-error">
                         <?php echo $password_error; ?>
                     </p>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">Remember me</label>
-                    <a href="#">Forgot Password?</a>
+                    <a href="forgot.php">Forgot Password?</a>
                 </div>
                 <button type="submit" name="login" class="btn">Login</button>
                 <p class="success">
@@ -61,28 +61,43 @@
             <form action="#" method="post">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" required>
+                    <input type="text" name="username-register" value="<?php echo $username_register; ?>">
+                    <p class="error username-register-error">
+                        <?php echo $username_register_error; ?>
+                    </p>
                     <label>Username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
+                    <input type="email" name="email" value="<?php echo $email; ?>">
+                    <p class="error email-error">
+                        <?php echo $email_error; ?>
+                    </p>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" name="password-register" value="<?php echo $password_register; ?>">
+                    <p class="error password-register-error">
+                        <?php echo $password_register_error; ?>
+                    </p>
                     <label>Password</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" name="confirm-password" value="<?php echo $confirm_password; ?>">
+                    <p class="error confirm-password-error">
+                        <?php echo $confirm_password_error; ?>
+                    </p>
                     <label>Confirm Password</label>
                 </div>
                 <div class="remember-forgot">
-                    <label><input type="checkbox">I agree to the terms & conditions</label>
+                    <label><input type="checkbox" name="terms">I agree to the terms & conditions</label>
                 </div>
                 <button type="submit" class="btn">Register</button>
+                <p class="success-register">
+                    <?php echo $success_register; ?>
+                </p>
                 <div class="login-register">
                     <p>Already have an account? <a href="#" class="login-link">Login here</a> </p>
                 </div>

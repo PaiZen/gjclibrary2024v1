@@ -173,6 +173,7 @@ body {
 	transform: translateY(-20px);
 	margin-bottom: 20px;
 	font-size: 16px;
+    text-align: center;
 }
 
 .success{
@@ -182,4 +183,5 @@ body {
 	padding: 10px;
 	display: none;
 	font-size: 16px;
+    text-align: center;
 }
