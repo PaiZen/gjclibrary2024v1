@@ -44,7 +44,7 @@
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox">Remember me</label>
-                    <a href="forgot.php">Forgot Password?</a>
+                    <a href="emailotp.html">Forgot Password?</a>
                 </div>
                 <button type="submit" name="login" class="btn">Login</button>
                 <p class="success">
