@@ -18,7 +18,7 @@ body {
 .wrapper {
     position: relative;
     width: 400px;
-    height: 440px;
+    height: 760px;
     background: white;
     border: 2px solid black;
     border-radius: 20px;
@@ -26,12 +26,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    transition: height .2s ease;
-}
-
-.wrapper.active {
-    height: 600px;
 }
 
 .wrapper .form-box {
@@ -39,29 +33,7 @@ body {
     padding: 40px;
 }
 
-.wrapper .form-box.login {
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-
-.wrapper.active .form-box.login {
-    transition: none;
-    transform: translateX(-400px);
-}
-
-.wrapper .form-box.register {
-    position: absolute;
-    transition: none;
-    transform: translateX(400px);
-}
-
-.wrapper.active .form-box.register {
-    transition: transform .18s ease;
-    transform: translateX(0);
-}
-
 .book-name {
-    font-size: 2em;
     color: black;
     text-align: center;
 }
@@ -111,29 +83,6 @@ body {
     line-height: 57px;
 }
 
-.remember-forgot {
-    font-size: .9em;
-    color: black;
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.remember-forgot label input {
-    accent-color: black;
-    margin-right: 3px;
-}
-
-.remember-forgot a {
-    color: black;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
 .btn {
     width: 100%;
     height: 45px;
@@ -145,43 +94,4 @@ body {
     font-size: 1em;
     color: white;
     font-weight: 500;
-}
-
-.login-register {
-    font-size: .9em;
-    color: black;
-    text-align: center;
-    font-weight: 500;
-    margin: 25px 0 10px;
-}
-
-.login-register p a {
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.login-register p a:hover {
-    text-decoration: underline;
-}
-
-.error {
-    color: #af4242;
-	background-color: #fde8ec;
-	padding: 10px;
-	display: none;
-	transform: translateY(-20px);
-	margin-bottom: 20px;
-	font-size: 16px;
-    text-align: center;
-}
-
-.success{
-	margin-bottom: 30px;
-	color: green;
-	background-color: #d2ffd2;
-	padding: 10px;
-	display: none;
-	font-size: 16px;
-    text-align: center;
 }
